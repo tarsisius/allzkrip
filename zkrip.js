@@ -165,3 +165,11 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   js.src = &quot;//connect.facebook.net/en_US/all.js#xfbml=1&quot;;
   fjs.parentNode.insertBefore(js, fjs);
 }(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));
+  var pres = document.getElementsByTagName(&quot;blockquote&quot;);
+for (var i = 0; i &lt; pres.length; i++) {
+  pres[i].addEventListener(&quot;dblclick&quot;, function () {
+    var selection = getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(this);
+    selection.removeAllRanges();
+    selection.addRange(range);   }, false); }
